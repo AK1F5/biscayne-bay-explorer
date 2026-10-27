@@ -3,6 +3,10 @@
 An interactive Streamlit app for exploring a short aquatic-robot water-quality
 survey from Biscayne Bay. Built for **MC – SDIR | Streamlit Data App**, CIS3590.
 
+**Repository:** https://github.com/AK1F5/biscayne-bay-explorer
+
+**Public app:** Deployment is deferred; no Streamlit Community Cloud URL has been created yet.
+
 ## Purpose and features
 
 The app helps students compare measurements, examine changes during the survey,
@@ -139,6 +143,9 @@ Deploy this repository's `main` branch with **`app.py`** as the entrypoint and
 The requirements file and bundled data are in the repository.
 Deployment instructions follow the
 [official Streamlit guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
+
+The public URL remains a required assignment deliverable. See the
+[submission checklist](docs/SUBMISSION.md) before submitting.
 
 ## Agile process and attribution
 

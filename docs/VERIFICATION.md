@@ -22,7 +22,14 @@ The first browser review revealed a Streamlit 1.50 Plotly deprecation warning:
 to `use_container_width=True`; browser reinspection confirmed the warning was gone.
 The startup test now also checks for visible warning elements.
 
+The filtered CSV was downloaded through the browser and verified locally:
+942 rows, seven expected columns, and first oxygen values of 6.48, 6.39, and
+6.45 mg/L. A final desktop preview was also inspected at 1440×1000.
+
 ## Deployment
 
-Public deployment verification is pending. Local tests do not establish that
+The public GitHub repository was opened and verified to contain the application,
+data, requirements, README, tests, and Agile documentation.
+Deployment was deferred at the user's request after the Streamlit sign-in page
+was reached. There is no public app URL yet. Local tests do not establish that
 Streamlit Community Cloud is deployed or publicly accessible.

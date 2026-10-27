@@ -55,8 +55,14 @@ fixed, then covered by a warning-free startup assertion.
 
 Scope: US6; documentation, automated checks, browser review, GitHub, and deployment.
 
-Review in progress: README, provenance, and verification record completed.
-Streamlit Community Cloud requires account sign-in before deployment.
+Review: README, provenance, and verification record completed. Code and the
+three implementation increments were uploaded to the public GitHub repository.
+All 20 tests and lint checks passed. Browser CSV export was downloaded and
+verified to contain 942 rows with the expected columns and initial values.
+
+Deployment is deferred at the user's request. Streamlit Community Cloud needs
+account sign-in, deployment, and a successful public-app check before US6 can
+be marked done. No live app URL or assignment submission is claimed.
 
 ## Review and retrospective
 
