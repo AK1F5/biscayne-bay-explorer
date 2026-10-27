@@ -2,20 +2,19 @@
 
 ## Ready
 
+- Public app: https://biscayne-bay-explorer-ak1f5.streamlit.app/
 - GitHub repository: https://github.com/AK1F5/biscayne-bay-explorer
 - README: https://github.com/AK1F5/biscayne-bay-explorer/blob/main/README.md
 - Agile evidence: https://github.com/AK1F5/biscayne-bay-explorer/blob/main/docs/AGILE.md
 - Source, bundled course CSV, and pinned `requirements.txt` are in the repository.
 - Twenty automated tests pass; phone, tablet, desktop, and CSV download checks completed.
 
-## Still required before final submission
+## Canvas submission
 
-1. Sign in to https://share.streamlit.io.
-2. Create an app from `AK1F5/biscayne-bay-explorer`, branch `main`, entrypoint `app.py`.
-3. Select Python 3.12 in Advanced settings and deploy. No secrets are needed.
-4. Open the generated public URL and confirm the controls, charts, table, and insights work.
-5. Add the public app URL to the README and this submission record.
-6. Submit the public app URL and GitHub repository link to the Canvas assignment.
+Submit the public app URL and GitHub repository link to **MC – SDIR | Streamlit
+Data App**. The README contains the app purpose, dataset description, user
+instructions, local setup, and public URL. Agile and verification records are
+linked from the README.
 
-Deployment is deferred at the user's request. The assignment has not been
-submitted, and the public Streamlit URL requirement is not yet satisfied.
+Deployment and public access were verified on October 27, 2026. The assignment
+has not been submitted in Canvas.

@@ -30,6 +30,19 @@ The filtered CSV was downloaded through the browser and verified locally:
 
 The public GitHub repository was opened and verified to contain the application,
 data, requirements, README, tests, and Agile documentation.
-Deployment was deferred at the user's request after the Streamlit sign-in page
-was reached. There is no public app URL yet. Local tests do not establish that
-Streamlit Community Cloud is deployed or publicly accessible.
+
+Deployed on October 27, 2026:
+https://biscayne-bay-explorer-ak1f5.streamlit.app/
+
+- Source: `AK1F5/biscayne-bay-explorer`, branch `main`, entrypoint `app.py`.
+- Runtime: Python 3.12; bundled CSV and pinned requirements; no secrets required.
+- Opened the public URL in the in-app browser without a Streamlit login.
+- Verified both Plotly charts and changed the measurement to salinity.
+- Advanced the start time by one second: the displayed count changed from
+  942 to 941, and Insights reported the same 941 readings.
+- Opened Data display and Insights successfully.
+- Cloud review exposed a duplicate widget-default warning on reset. A focused
+  regression test reproduced it. Initializing the slider through session state
+  fixed the conflict; all 20 tests, lint, and formatting checks passed afterward.
+- After the cloud update, repeated the filter/reset interaction in the public
+  browser session. Reset restored all 942 observations with no visible warning.

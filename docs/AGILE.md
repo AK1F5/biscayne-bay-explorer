@@ -15,7 +15,7 @@ This is an individual assignment implemented in short, verifiable iterations.
 | US3 | As a reader, I can interpret the visualizations accurately. | Plotly charts have titles, units, axis labels, legends, and hover values; chronology is correct. | Must | Done |
 | US4 | As a reviewer, I can verify the underlying data and calculations. | Filtered table, CSV download, summary statistics, methodology, and data caveats are available. | Must | Done |
 | US5 | As a phone or desktop visitor, I can navigate comfortably. | Clear sections, readable controls, responsive charts, and mobile checks. | Must | Done |
-| US6 | As an instructor, I can reproduce and access the app. | Modular code, pinned requirements, README, passing tests, public repository and Streamlit URL. | Must | In progress: deployment |
+| US6 | As an instructor, I can reproduce and access the app. | Modular code, pinned requirements, README, passing tests, public repository and Streamlit URL. | Must | Done |
 
 ## Definition of done
 
@@ -60,9 +60,16 @@ three implementation increments were uploaded to the public GitHub repository.
 All 20 tests and lint checks passed. Browser CSV export was downloaded and
 verified to contain 942 rows with the expected columns and initial values.
 
-Deployment is deferred at the user's request. Streamlit Community Cloud needs
-account sign-in, deployment, and a successful public-app check before US6 can
-be marked done. No live app URL or assignment submission is claimed.
+Released on Streamlit Community Cloud on October 27, 2026, using Python 3.12,
+the `main` branch, and `app.py`. The public app opened in a separate browser
+session without signing in. Measurement selection, time filtering, the data
+section, and calculated insights were checked on the deployed app.
+A reset warning found during cloud review was reproduced in a regression test
+and fixed by initializing the time range through session state. All 20 tests,
+lint, and formatting checks passed after the fix.
+
+Public app: https://biscayne-bay-explorer-ak1f5.streamlit.app/
+Assignment submission in Canvas remains a separate step.
 
 ## Review and retrospective
 

@@ -5,7 +5,7 @@ survey from Biscayne Bay. Built for **MC – SDIR | Streamlit Data App**, CIS359
 
 **Repository:** https://github.com/AK1F5/biscayne-bay-explorer
 
-**Public app:** Deployment is deferred; no Streamlit Community Cloud URL has been created yet.
+**Public app:** [Open Biscayne Bay Explorer](https://biscayne-bay-explorer-ak1f5.streamlit.app/)
 
 ## Purpose and features
 
@@ -144,8 +144,8 @@ The requirements file and bundled data are in the repository.
 Deployment instructions follow the
 [official Streamlit guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
 
-The public URL remains a required assignment deliverable. See the
-[submission checklist](docs/SUBMISSION.md) before submitting.
+The public app is deployed from this repository and opens without signing in.
+See the [submission checklist](docs/SUBMISSION.md) for the deliverable links.
 
 ## Agile process and attribution
 
