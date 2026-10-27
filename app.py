@@ -23,6 +23,7 @@ st.set_page_config(page_title="Biscayne Bay Explorer", page_icon="🌊", layout=
 apply_styles()
 
 
+# Streamlit reruns this script after widget changes; caching avoids rereading the CSV.
 @st.cache_data(show_spinner=False)
 def get_survey():
     return load_survey()
@@ -39,6 +40,7 @@ def render_controls(survey):
         metric = MEASUREMENTS[selected]
         st.caption(metric.description)
 
+        # A range slider needs distinct bounds; a single-time survey still remains usable.
         if start < end:
             window = st.slider(
                 "Survey time",
@@ -58,6 +60,7 @@ def render_controls(survey):
             st.caption("This dataset has one recorded time.")
 
         alternatives = [label for label in MEASUREMENTS if label != selected]
+        # Repair the saved comparison if it now matches the newly selected measurement.
         if st.session_state.get("comparison") not in alternatives:
             st.session_state["comparison"] = alternatives[0]
         compare = st.selectbox("Compare with", alternatives, key="comparison")
@@ -129,6 +132,7 @@ def render_data(filtered):
         )
     st.dataframe(table, hide_index=True, width="stretch", height=400)
     st.caption("Source row is the original data-row number, excluding the CSV header.")
+    # Export the displayed table so the download respects both time and column selections.
     st.download_button(
         "Download this table (CSV)",
         table.to_csv(index=False).encode("utf-8"),
@@ -181,6 +185,7 @@ def render_insights(filtered, metric, compare):
     else:
         st.write("A single reading is selected, so an endpoint change cannot be calculated.")
 
+    # The helper returns None for too few pairs or a measurement with no variation.
     coefficient = correlation(filtered, compare, metric)
     if coefficient is None:
         st.info("Correlation needs three paired readings with variation in both measurements.")
@@ -239,6 +244,7 @@ def main():
         st.stop()
 
     metric, compare, window, show_points = render_controls(survey)
+    # Share one filtered dataset across all sections to keep their results consistent.
     filtered = filter_survey(survey, *window)
     survey_date = survey["Timestamp"].min().strftime("%B %d, %Y")
     st.markdown(
@@ -254,6 +260,7 @@ def main():
         st.info(
             "No observations fall in this window. Widen the time range or choose Reset filters."
         )
+        # End this rerun before building charts; the sidebar stays available for recovery.
         st.stop()
 
     overview, data, insights = st.tabs(["Overview", "Data display", "Insights"])
