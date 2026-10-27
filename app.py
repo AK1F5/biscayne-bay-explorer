@@ -42,11 +42,13 @@ def render_controls(survey):
 
         # A range slider needs distinct bounds; a single-time survey still remains usable.
         if start < end:
+            # Keep the range in session state so reset does not conflict with a default value.
+            if "time_window" not in st.session_state:
+                st.session_state["time_window"] = (start, end)
             window = st.slider(
                 "Survey time",
                 min_value=start,
                 max_value=end,
-                value=(start, end),
                 step=timedelta(seconds=1),
                 format="HH:mm:ss",
                 key="time_window",

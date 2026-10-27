@@ -58,6 +58,7 @@ def test_points_toggle_and_reset_restore_default_controls(app):
     app.checkbox(key="show_points").check().run()
     app.button[0].click().run()
     assert not app.exception
+    assert not app.warning
     assert app.selectbox(key="measurement").value == "Dissolved oxygen"
     assert app.selectbox(key="comparison").value == "Temperature"
     assert app.checkbox(key="show_points").value is False
