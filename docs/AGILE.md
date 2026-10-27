@@ -10,7 +10,7 @@ This is an individual assignment implemented in short, verifiable iterations.
 
 | ID | User story | Acceptance criteria | Priority | Status |
 | --- | --- | --- | --- | --- |
-| US1 | As a visitor, I can open the app without setup or an upload. | Bundled course CSV loads; source and survey date are visible; invalid input produces a helpful error. | Must | To do |
+| US1 | As a visitor, I can open the app without setup or an upload. | Bundled course CSV loads; source and survey date are visible; invalid input produces a helpful error. | Must | Done |
 | US2 | As a student, I can choose a measurement and survey interval. | Selector and range slider update charts, statistics, and table consistently; reset restores defaults. | Must | To do |
 | US3 | As a reader, I can interpret the visualizations accurately. | Plotly charts have titles, units, axis labels, legends, and hover values; chronology is correct. | Must | To do |
 | US4 | As a reviewer, I can verify the underlying data and calculations. | Filtered table, CSV download, summary statistics, methodology, and data caveats are available. | Must | To do |
@@ -33,6 +33,12 @@ Scope: US1; parsing, metric definitions, validation, provenance, and data tests.
 Planning evidence: read the assignment rubric, MC Module 2 overview/resources,
 Week 3 Streamlit examples (including Example 7), course repository, and existing
 local water dashboard before implementation.
+
+Review: eight data tests passed. Confirmed 942 observations, inclusive time
+filtering, correct probe timestamps, source-row preservation, reference oxygen
+statistics, and explicit behavior for missing values and malformed files.
+Inspection found all turbidity values negative; the scope was narrowed to five
+interpretable measurements while retaining the untouched source CSV.
 
 ### Iteration 2 — Interactive exploration
 
