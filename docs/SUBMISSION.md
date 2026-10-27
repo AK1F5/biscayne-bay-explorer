@@ -11,10 +11,11 @@
 
 ## Canvas submission
 
-Submit the public app URL and GitHub repository link to **MC – SDIR | Streamlit
-Data App**. The README contains the app purpose, dataset description, user
+The public app URL and GitHub repository link were submitted to **MC – SDIR |
+Streamlit Data App**. The README contains the app purpose, dataset description, user
 instructions, local setup, and public URL. Agile and verification records are
 linked from the README.
 
-Deployment and public access were verified on October 27, 2026. The assignment
-has not been submitted in Canvas.
+Deployment and public access were verified on October 27, 2026. Canvas confirmed
+the text-entry submission on October 27, 2026, at 6:45 PM Eastern Time. Both links
+were verified in the saved submission preview. Grading is pending.

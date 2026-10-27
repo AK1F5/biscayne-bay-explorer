@@ -69,7 +69,8 @@ and fixed by initializing the time range through session state. All 20 tests,
 lint, and formatting checks passed after the fix.
 
 Public app: https://biscayne-bay-explorer-ak1f5.streamlit.app/
-Assignment submission in Canvas remains a separate step.
+The public app and repository links were submitted in Canvas on October 27,
+2026. The saved submission preview was checked to confirm both links.
 
 ## Review and retrospective
 
